@@ -8,7 +8,7 @@
                 <img class="media-object img-rounded img-responsive"  src="
                 <%= gravatar_url(@user,{ size: 500 }) %>" alt="">
             </div>
-             <%= render 'relationships/follow_button', user: @user %>
+            <%= render 'relationships/follow_button', user: @user %>
         </div>
     </asside>
     <div class="col-xs-8">
@@ -35,6 +35,6 @@
                        <% end %>
             </li>
         </ul>
-        <%= render 'users', users: @followings %>
+        <%= render 'users', users: @followers %>
     </div>
 </div>

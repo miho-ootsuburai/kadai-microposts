@@ -30,7 +30,7 @@ class User < ApplicationRecord
     end
     
     def following?(other_user)
-        self.followings.include?(other_user.id)
+        followings.include?(other_user)
     end
     
     def favorite(user)
@@ -42,8 +42,8 @@ class User < ApplicationRecord
         like.destroy if like
     end
     
-    def favorites?(user)
-        favorites.include?(user.id)
+    def favorites?(micropost)
+        favorites.include?(micropost)
     end
     
     def feed_microposts
